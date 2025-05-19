@@ -199,18 +199,13 @@ nav {
 }
 
 .box {
-    height: 360px;
+    height: 390px;
     width: 230px;
     min-width: 350px;
-    /* background-color: aquamarine; */
     display: grid;
-    grid-row: 1fr 2fr;
-    margin-top: 20px;
-    justify-items: center;
-    align-items: center;
+    margin-top: 10px;
+    place-items: center;
     overflow-y: hidden;
-    /* border-radius: 25px; */
-
 }
 
 .box2 {
@@ -244,6 +239,10 @@ nav {
     width: 405px;
     object-fit: contain;
     /* width: 350px; */
+}
+
+.add-to-cart:hover {
+    background-color: gray;
 }
 
 .Ac {
@@ -687,4 +686,50 @@ nav {
         color: white;
         /* width: 561px; */
     }
+}
+
+.cart-icon {
+    position: relative;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.cart-icon i {
+    font-size: 24px;
+    color: #333;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+
+.add-to-cart {
+    background-color: gray;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.add-to-cart:hover {
+    background-color: #45a049;
+}
+
+.box .add-to-cart,
+.box2 .add-to-cart {
+    width: 50%;
+    /* margin-top: 10px; */
+    border-radius: 12px;
 }
