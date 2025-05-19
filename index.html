@@ -10,6 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -47,19 +48,21 @@
         </div>
         <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="#">Products</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
         <div class="cart-icon">
-            <i class="fas fa-shopping-cart"></i>
-            <span class="cart-count">0</span>
+            <a href="/add-to-cart.html">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </a>
         </div>
         <div class="hamburger">&#9776;</div>
     </nav>
 
     <!-- body -->
-    <div class="part-1">
+    <div class="part-1"  data-aos="fade-up" data-aos-anchor-placement="top-center" class="left">
 
         <div class="left">
             <h2>
@@ -133,41 +136,41 @@
             <img src="/Ac/lg.jpeg" alt="">
             <p>LG A/c 1.5-ton</p>
             <p>Rs-32,000</p>
-            <button class="add-to-cart" data-product="Xiomi-Full HD TV" data-price="29000">Add to Cart</button>
+            <button class="add-to-cart" data-product="LG A/c 1.5-ton" data-price="29000">Add to Cart</button>
         </div>
         <div class="box2">
             <img src="/Ac/samg.jpeg" alt="">
             <p>Samsung A/c 1.5-ton</p>
             <p>Rs-30,000</p>
-            <button class="add-to-cart" data-product="Xiomi-Full HD TV" data-price="29000">Add to Cart</button>
+            <button class="add-to-cart" data-product="Samsung A/c 1.5-ton" data-price="29000">Add to Cart</button>
 
         </div>
         <div class="box2">
             <img src="/Ac/voltas.jpeg" alt="">
             <p>Voltas A/c 1.5-ton</p>
             <p>Rs-27,000</p>
-            <button class="add-to-cart" data-product="Xiomi-Full HD TV" data-price="29000">Add to Cart</button>
+            <button class="add-to-cart" data-product="Voltas A/c 1.5-ton" data-price="29000">Add to Cart</button>
 
         </div>
         <div class="box2">
             <img src="/Ac/ifb.jpeg" alt="">
             <p>IFB A/c 1-ton</p>
             <p>Rs-26,000</p>
-            <button class="add-to-cart" data-product="Xiomi-Full HD TV" data-price="29000">Add to Cart</button>
+            <button class="add-to-cart" data-product="IFB A/c 1-ton" data-price="29000">Add to Cart</button>
 
         </div>
         <div class="box2">
             <img src="/Ac/haier.jpeg" alt="">
             <p>Haier A/c 1.5-ton</p>
             <p>Rs-29,000</p>
-            <button class="add-to-cart" data-product="Xiomi-Full HD TV" data-price="29000">Add to Cart</button>
+            <button class="add-to-cart" data-product="Haier A/c 1.5-ton" data-price="29000">Add to Cart</button>
 
         </div>
         <div class="box2">
             <img src="/Ac/voltas2.ac.jpeg" alt="">
             <p>Voltas A/c 1-ton</p>
             <p>Rs-24,000</p>
-            <button class="add-to-cart" data-product="Xiomi-Full HD TV" data-price="29000">Add to Cart</button>
+            <button class="add-to-cart" data-product="Voltas A/c 1-ton" data-price="29000">Add to Cart</button>
 
         </div>
 
@@ -183,42 +186,42 @@
             <img src="/micro/samg.jpeg" alt="">
             <p>Samsung Oven-5kg</p>
             <p>Rs-20,000</p>
-            <button class="add-to-cart" data-product="Xiomi-Full HD TV" data-price="29000">Add to Cart</button>
+            <button class="add-to-cart" data-product="Samsung Oven-5kg" data-price="29000">Add to Cart</button>
 
         </div>
         <div class="box">
             <img src="/micro/lg.jpeg" alt="">
             <p>LG Oven-5.5kg </p>
             <p>Rs-18,000</p>
-            <button class="add-to-cart" data-product="Xiomi-Full HD TV" data-price="29000">Add to Cart</button>
+            <button class="add-to-cart" data-product="LG Oven-5.5kg" data-price="29000">Add to Cart</button>
 
         </div>
         <div class="box">
             <img src="/micro/panasonic.jpeg" alt="">
             <p>Panasonic Oven-4.9kg</p>
             <p>Rs-17,000</p>
-            <button class="add-to-cart" data-product="Xiomi-Full HD TV" data-price="29000">Add to Cart</button>
+            <button class="add-to-cart" data-product="Panasonic Oven-4.9kg" data-price="29000">Add to Cart</button>
 
         </div>
         <div class="box">
             <img src="/micro/whirphool.jpeg" alt="">
             <p>Whirphool Oven-5kg</p>
             <p>Rs-20,000</p>
-            <button class="add-to-cart" data-product="Xiomi-Full HD TV" data-price="29000">Add to Cart</button>
+            <button class="add-to-cart" data-product="Whirphool Oven-5kg" data-price="29000">Add to Cart</button>
 
         </div>
         <div class="box">
             <img src="/micro/hairer.jpeg" alt="">
             <p>Haier Oven-5.5kg</p>
             <p>Rs-19,000</p>
-            <button class="add-to-cart" data-product="Xiomi-Full HD TV" data-price="29000">Add to Cart</button>
+            <button class="add-to-cart" data-product="Haier Oven-5.5kg" data-price="29000">Add to Cart</button>
 
         </div>
         <div class="box">
             <img src="/micro/croma-oven.webp" alt="">
             <p>Croma Oven-4.9kg</p>
             <p>Rs-15,000</p>
-            <button class="add-to-cart" data-product="Xiomi-Full HD TV" data-price="29000">Add to Cart</button>
+            <button class="add-to-cart" data-product="Croma Oven-4.9kg" data-price="29000">Add to Cart</button>
 
         </div>
     </div>
@@ -232,42 +235,42 @@
             <img src="/Wsh mac/lg.jpeg" alt="">
             <p>LG Washing Machine-15kg</p>
             <p>Rs-32,000</p>
-            <button class="add-to-cart" data-product="Xiomi-Full HD TV" data-price="29000">Add to Cart</button>
+            <button class="add-to-cart" data-product="LG Washing Machine-15kg" data-price="29000">Add to Cart</button>
 
         </div>
         <div class="box">
             <img src="/Wsh mac/samg.jpeg" alt="">
             <p>Samsung Washing Machine-16kg</p>
             <p>Rs-29,000</p>
-            <button class="add-to-cart" data-product="Xiomi-Full HD TV" data-price="29000">Add to Cart</button>
+            <button class="add-to-cart" data-product="Samsung Washing Machine-16kg" data-price="29000">Add to Cart</button>
 
         </div>
         <div class="box">
             <img src="/Wsh mac/voltas.jpeg" alt="">
             <p>IFB Washing Machine-15kg</p>
             <p>Rs-26,000</p>
-            <button class="add-to-cart" data-product="Xiomi-Full HD TV" data-price="29000">Add to Cart</button>
+            <button class="add-to-cart" data-product="IFB Washing Machine-15kg" data-price="29000">Add to Cart</button>
 
         </div>
         <div class="box">
             <img src="/Wsh mac/onida.jpeg" alt="">
             <p>Onida Washing Machine-14.5kg</p>
             <p>Rs-25,000</p>
-            <button class="add-to-cart" data-product="Xiomi-Full HD TV" data-price="29000">Add to Cart</button>
+            <button class="add-to-cart" data-product="Onida Washing Machine-14.5kg" data-price="29000">Add to Cart</button>
 
         </div>
         <div class="box">
             <img src="/Wsh mac/whirphool.jpeg" alt="">
             <p>Whirphool Washing Machine-15kg</p>
             <p>Rs-27,000</p>
-            <button class="add-to-cart" data-product="Xiomi-Full HD TV" data-price="29000">Add to Cart</button>
+            <button class="add-to-cart" data-product="Whirphool Washing Machine-15kg" data-price="29000">Add to Cart</button>
 
         </div>
         <div class="box">
             <img src="/Wsh mac/croma-washing.webp" alt="">
             <p>Croma Washing Machine-16kg</p>
             <p>Rs-23,000</p>
-            <button class="add-to-cart" data-product="Xiomi-Full HD TV" data-price="29000">Add to Cart</button>
+            <button class="add-to-cart" data-product="Croma Washing Machine-16kg" data-price="29000">Add to Cart</button>
 
         </div>
     </div>
@@ -281,42 +284,42 @@
             <img src="/fridge/lg.jpeg" alt="">
             <p>LG 3-door Refrigerator</p>
             <p>Rs-32,000</p>
-            <button class="add-to-cart" data-product="Xiomi-Full HD TV" data-price="29000">Add to Cart</button>
+            <button class="add-to-cart" data-product="LG 3-door Refrigerator" data-price="29000">Add to Cart</button>
 
         </div>
         <div class="box">
             <img src="/fridge/onida.jpeg" alt="">
             <p>Onida 3-door Golden Refrigerator</p>
             <p>Rs-38,000</p>
-            <button class="add-to-cart" data-product="Xiomi-Full HD TV" data-price="29000">Add to Cart</button>
+            <button class="add-to-cart" data-product="Onida 3-door Golden Refrigerator" data-price="29000">Add to Cart</button>
 
         </div>
         <div class="box">
             <img src="/fridge/samg.jpeg" alt="">
             <p>Samsung 2-door Refrigerator</p>
             <p>Rs-27,000</p>
-            <button class="add-to-cart" data-product="Xiomi-Full HD TV" data-price="29000">Add to Cart</button>
+            <button class="add-to-cart" data-product="Samsung 2-door Refrigerator" data-price="29000">Add to Cart</button>
 
         </div>
         <div class="box">
             <img src="/fridge/voltas.jpeg" alt="">
             <p>IFB 3-door smart Refrigerator</p>
             <p>Rs-35,000</p>
-            <button class="add-to-cart" data-product="Xiomi-Full HD TV" data-price="29000">Add to Cart</button>
+            <button class="add-to-cart" data-product="IFB 3-door smart Refrigerator" data-price="29000">Add to Cart</button>
 
         </div>
         <div class="box">
             <img src="/fridge/whirphool.jpeg" alt="">
             <p>Whirphool 2-door Refrigerator</p>
             <p>Rs-26,000</p>
-            <button class="add-to-cart" data-product="Xiomi-Full HD TV" data-price="29000">Add to Cart</button>
+            <button class="add-to-cart" data-product="Whirphool 2-door Refrigerator" data-price="29000">Add to Cart</button>
 
         </div>
         <div class="box">
             <img src="/fridge/samg-wsh.webp" alt="">
             <p>Samsung Smart Refrigerator</p>
             <p>Rs-21,000</p>
-            <button class="add-to-cart" data-product="Xiomi-Full HD TV" data-price="29000">Add to Cart</button>
+            <button class="add-to-cart" data-product="Samsung Smart Refrigerator" data-price="29000">Add to Cart</button>
 
         </div>
     </div>
@@ -357,7 +360,7 @@
         });
 
         // Cart functionality
-        let cart = [];
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
         const addToCartButtons = document.querySelectorAll('.add-to-cart');
         const cartCountElement = document.querySelector('.cart-count');
 
@@ -391,7 +394,6 @@
         });
 
         function showNotification(message) {
-            // Create notification element
             const notification = document.createElement('div');
             notification.className = 'notification';
             notification.textContent = message;
@@ -432,6 +434,11 @@
                 updateCartCount();
             }
         });
+    </script>
+    <link rel="stylesheet" href="script.js">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init(4000);
     </script>
 
 

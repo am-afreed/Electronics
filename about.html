@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Electronics Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        .about-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 60px;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .section h2 {
+            color: #333;
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .story-content {
+            line-height: 1.8;
+            color: #666;
+            text-align: justify;
+        }
+
+        .founders-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .founder-card {
+            text-align: center;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .founder-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .founder-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .founder-card h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .founder-card p {
+            color: #666;
+            font-style: italic;
+        }
+
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .testimonial-card {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            font-size: 60px;
+            color: #4CAF50;
+            position: absolute;
+            top: -20px;
+            left: 10px;
+            opacity: 0.2;
+        }
+
+        .testimonial-card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .customer-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .customer-info img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .customer-info h4 {
+            color: #333;
+            margin: 0;
+        }
+
+        .customer-info p {
+            color: #666;
+            margin: 0;
+            font-size: 0.9em;
+        }
+
+        .rating {
+            color: #ffd700;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .about-container {
+                padding: 10px;
+            }
+
+            .section {
+                padding: 20px;
+            }
+
+            .founders-grid, .testimonials {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/logo-removebg.png" alt="">
+        </div>
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="cart-icon">
+            <a href="/add-to-cart.html">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </a>
+        </div>
+        <div class="hamburger">&#9776;</div>
+    </nav>
+
+    <div class="about-container">
+        <!-- Our Story Section -->
+        <div class="section">
+            <h2>Our Story</h2>
+            <div class="story-content">
+                <p>Founded in 2020, our electronics store began with a simple mission: to provide high-quality electronic products at affordable prices while delivering exceptional customer service. What started as a small local shop has grown into a trusted name in the electronics retail industry.</p>
+                <p>Our journey has been marked by continuous innovation and a commitment to staying ahead of technological trends. We carefully select each product in our inventory, ensuring that we offer only the best brands and latest technology to our customers.</p>
+                <p>Today, we're proud to serve thousands of satisfied customers across the country, providing them with everything from the latest smart TVs to essential home appliances. Our success is built on our core values of quality, reliability, and customer satisfaction.</p>
+            </div>
+        </div>
+
+        <!-- Founders Section -->
+        <div class="section">
+            <h2>Our Founders</h2>
+            <div class="founders-grid">
+                <div class="founder-card">
+                    <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Founder 1">
+                    <h3>Mohd Afreed</h3>
+                    <p>CEO & Co-Founder</p>
+                    <p>With over 15 years of experience in the electronics industry, John leads our company with vision and expertise.</p>
+                </div>
+                <div class="founder-card">
+                    <img src="https://randomuser.me/api/portraits/men/4.jpg" alt="Founder 2">
+                    <h3>Zaid B</h3>
+                    <p>CTO & Co-Founder</p>
+                    <p>Sarah's technical expertise and innovative thinking have been instrumental in shaping our product selection.</p>
+                </div>
+                <div class="founder-card">
+                    <img src="https://randomuser.me/api/portraits/men/7.jpg" alt="Founder 3">
+                    <h3>Salick M</h3>
+                    <p>Operations Director</p>
+                    <p>Michael ensures smooth operations and maintains our high standards of customer service.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Happy Customers Section -->
+        <div class="section">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonials">
+                <div class="testimonial-card">
+                    <p>"The best electronics store I've ever shopped at. Their customer service is exceptional, and the products are always top quality."</p>
+                    <div class="customer-info">
+                        <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Customer 1">
+                        <div>
+                            <h4>Emily Davis</h4>
+                            <p>Regular Customer</p>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"I've been buying all my electronics from this store for years. Their prices are competitive, and the staff is always helpful."</p>
+                    <div class="customer-info">
+                        <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Customer 2">
+                        <div>
+                            <h4>Robert Wilson</h4>
+                            <p>Loyal Customer</p>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"The after-sales service is outstanding. They helped me set up my new TV and made sure everything was working perfectly."</p>
+                    <div class="customer-info">
+                        <img src="https://randomuser.me/api/portraits/women/3.jpg" alt="Customer 3">
+                        <div>
+                            <h4>Lisa Anderson</h4>
+                            <p>Happy Customer</p>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <ul class="footer-1">
+                <li>Home</li>
+                <li>Menu</li>
+                <li>Pricing</li>
+                <li>About Us</li>
+            </ul>
+            <p class="footer-2">© 2024 Company, Electronics Store Ltd.Pvt</p>
+            <div class="footer-3">
+                <div class="f-1">
+                    <p class="h-1">Connect With Us</p>
+                    <i class="fa-brands fa-square-facebook"></i>
+                    <i class="fa-brands fa-square-x-twitter"></i>
+                    <i class="fa-brands fa-square-instagram"></i>
+                    <i class="fa-brands fa-telegram"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Hamburger menu functionality
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.navbar ul');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Load cart count
+        window.addEventListener('load', () => {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+            document.querySelector('.cart-count').textContent = cartCount;
+        });
+    </script>
+</body>
+</html>

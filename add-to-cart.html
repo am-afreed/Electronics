@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .cart-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+
+        .cart-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        .cart-item-details {
+            flex-grow: 1;
+        }
+
+        .cart-item-price {
+            font-weight: bold;
+            margin: 0 20px;
+        }
+
+        .cart-item-quantity {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .quantity-btn {
+            padding: 5px 10px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .remove-btn {
+            padding: 5px 10px;
+            background: #ff4444;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+
+        .cart-count {
+            position: relative;
+            top: -14px;
+            right: 0px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 12px;
+        }
+
+        .cart-total {
+            text-align: right;
+            margin-top: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .empty-cart {
+            text-align: center;
+            padding: 50px;
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .continue-shopping {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .footer {
+            margin-top: 305px;
+            background-color: #181717;
+            height: 240px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navbar  -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/logo-removebg.png" alt="">
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="cart-icon">
+            <a href="add-to-cart.html">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </a>
+        </div>
+        <div class="hamburger">&#9776;</div>
+    </nav>
+
+    <!-- body  -->
+    <div class="cart-container">
+        <h1>Shopping Cart</h1>
+        <div id="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div class="cart-total">
+            Total: ₹<span id="cart-total">0</span>
+        </div>
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="index.html" class="continue-shopping">Continue Shopping</a>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div class="footer">
+            <ul class="footer-1">
+                <li>Home</li>
+                <li>Menu</li>
+                <li>Pricing</li>
+                <li>About Us</li>
+            </ul>
+            <p class="footer-2">© 2024 Company,Burger Shop.Ltd.Pvt</p>
+            <div class="footer-3">
+                <div class="f-1">
+                    <p class="h-1">Connect With Us</p>
+
+                    <i class="fa-brands fa-square-facebook"></i>
+
+                    <i class="fa-brands fa-square-x-twitter"></i>
+
+                    <i class="fa-brands fa-square-instagram"></i>
+
+                    <i class="fa-brands fa-telegram"></i>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Load cart from localStorage
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const cartItemsContainer = document.getElementById('cart-items');
+        const cartTotalElement = document.getElementById('cart-total');
+        const cartCountElement = document.querySelector('.cart-count');
+
+        function updateCartDisplay() {
+            cartItemsContainer.innerHTML = '';
+
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = `
+                    <div class="empty-cart">
+                        <p>Your cart is empty</p>
+                        <a href="index.html" class="continue-shopping">Continue Shopping</a>
+                    </div>
+                `;
+                cartTotalElement.textContent = '0';
+                cartCountElement.textContent = '0';
+                return;
+            }
+
+            let total = 0;
+            cart.forEach((item, index) => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+
+                const cartItemElement = document.createElement('div');
+                cartItemElement.className = 'cart-item';
+                cartItemElement.innerHTML = `
+                    <div class="cart-item-details">
+                        <h3>${item.product}</h3>
+                    </div>
+                    <div class="cart-item-price">₹${item.price}</div>
+                    <div class="cart-item-quantity">
+                        <button class="quantity-btn" onclick="updateQuantity(${index}, -1)">-</button>
+                        <span>${item.quantity}</span>
+                        <button class="quantity-btn" onclick="updateQuantity(${index}, 1)">+</button>
+                    </div>
+                    <button class="remove-btn" onclick="removeItem(${index})">Remove</button>
+                `;
+                cartItemsContainer.appendChild(cartItemElement);
+            });
+
+            cartTotalElement.textContent = total;
+            cartCountElement.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+        }
+
+        function updateQuantity(index, change) {
+            cart[index].quantity += change;
+            if (cart[index].quantity <= 0) {
+                cart.splice(index, 1);
+            }
+            saveCart();
+            updateCartDisplay();
+        }
+
+        function removeItem(index) {
+            cart.splice(index, 1);
+            saveCart();
+            updateCartDisplay();
+        }
+
+        function saveCart() {
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+
+        // Initial display
+        updateCartDisplay();
+    </script>
+</body>
+
+</html>
